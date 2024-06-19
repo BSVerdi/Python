@@ -1,6 +1,7 @@
 def tabuleiro(posicoes):
     print()
     for i in range(0, 3):
+        for j in range(0, 3):
             print(f' {posicoes[i][j]} ', end='')
             if j < 2:
                 print('|', end='')
