@@ -69,6 +69,10 @@ def iniciar_jogo():
         if jogada.cget('text') == '':
             tabuleiro[i][j] = jogador
             jogada.configure(text=jogador)
+            if jogador == 'X':
+                jogada.configure(text_color='#E01900')
+            else:
+                jogada.configure(text_color='#1E2DB6')
             jogadas += 1
 
         # inicio da checagem de vitoria
@@ -129,27 +133,27 @@ def iniciar_jogo():
     #----> interface <----
     
     # linha 1
-    posicao_0 = CTkButton(master = jogo, command=lambda:posicao(0, 0, posicao_0), text='', text_color='black', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
+    posicao_0 = CTkButton(master = jogo, command=lambda:posicao(0, 0, posicao_0), text='', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
     posicao_0.place(x=20, y=20)
-    posicao_1 = CTkButton(master = jogo, command=lambda:posicao(0, 1, posicao_1), text='', text_color='black', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
+    posicao_1 = CTkButton(master = jogo, command=lambda:posicao(0, 1, posicao_1), text='', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
     posicao_1.place(x=145, y=20)
-    posicao_2 = CTkButton(master = jogo, command=lambda:posicao(0, 2, posicao_2), text='', text_color='black', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
+    posicao_2 = CTkButton(master = jogo, command=lambda:posicao(0, 2, posicao_2), text='', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
     posicao_2.place(x=270, y=20)
 
     # linha 2
-    posicao_3 = CTkButton(master = jogo, command=lambda:posicao(1, 0, posicao_3), text='', text_color='black', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
+    posicao_3 = CTkButton(master = jogo, command=lambda:posicao(1, 0, posicao_3), text='', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
     posicao_3.place(x=20, y=145)
-    posicao_4 = CTkButton(master = jogo, command=lambda:posicao(1, 1, posicao_4), text='', text_color='black', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
+    posicao_4 = CTkButton(master = jogo, command=lambda:posicao(1, 1, posicao_4), text='', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
     posicao_4.place(x=145, y=145)
-    posicao_5 = CTkButton(master = jogo, command=lambda:posicao(1, 2, posicao_5), text='', text_color='black', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
+    posicao_5 = CTkButton(master = jogo, command=lambda:posicao(1, 2, posicao_5), text='', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
     posicao_5.place(x=270, y=145)
 
     # linha 3
-    posicao_6 = CTkButton(master = jogo, command=lambda:posicao(2, 0, posicao_6), text='', text_color='black', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
+    posicao_6 = CTkButton(master = jogo, command=lambda:posicao(2, 0, posicao_6), text='', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
     posicao_6.place(x=20, y=270)
-    posicao_7 = CTkButton(master = jogo, command=lambda:posicao(2, 1, posicao_7), text='', text_color='black', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
+    posicao_7 = CTkButton(master = jogo, command=lambda:posicao(2, 1, posicao_7), text='', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
     posicao_7.place(x=145, y=270)
-    posicao_8 = CTkButton(master = jogo, command=lambda:posicao(2, 2, posicao_8), text='', text_color='black', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
+    posicao_8 = CTkButton(master = jogo, command=lambda:posicao(2, 2, posicao_8), text='', width=110, height=110, font=('Ivy', 90), fg_color='white', hover_color='gray')
     posicao_8.place(x=270, y=270)
 
 # jogar
